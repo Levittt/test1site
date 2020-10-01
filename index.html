@@ -17,24 +17,24 @@
         <!--меню ПК-->
         <div class='header'>
                 <div class = 'menu'>
-                    <p><a href = '#mainframe'>ГЛАВНАЯ</a></p>
-                    <p><a href = '#aboutpython'>О PYTHON</a></p>
-                    <p><a href = '#tutorial'>УЧЕБНИК</a></p>
-                    <p><a href = '#links'>ПОЛЕЗНОЕ</a></p>
-                    <p><a href = '#contacts'>КОНТАКТЫ</a></p>
+                    <p><a class = 'pc_menu' href = '#mainframe'>ГЛАВНАЯ</a></p>
+                    <p><a class = 'pc_menu' href = '#aboutpython'>О PYTHON</a></p>
+                    <p><a class = 'pc_menu' href = '#tutorial'>УЧЕБНИК</a></p>
+                    <p><a class = 'pc_menu' href = '#links'>ПОЛЕЗНОЕ</a></p>
+                    <p><a class = 'pc_menu' href = '#contacts'>КОНТАКТЫ</a></p>
                 </div>  
         </div>
         <!--меню ТФ-->
         <div class='header_burger'>
             <div class = 'menu_burger'>
                 <ul class = 'main-menu'>
-                    <li><a href = '#menu'><i class = 'fas fa-bars'></i></a>
+                    <li><a href = '#menu'>МЕНЮ</a>
                         <ul class = 'sub-menu'>
-                            <li><a href = '#mainframe'>ГЛАВНАЯ</a></li>
-                            <li><a href = '#aboutpython'>О PYTHON</a></li>
-                            <li><a href = '#tutorial'>УЧЕБНИК</a></li>
-                            <li><a href = '#links'>ПОЛЕЗНОЕ</a></li>
-                            <li><a href = '#contacts'>КОНТАКТЫ</a></li>
+                            <li><a class = 'mob_menu' href = '#mainframe'>ГЛАВНАЯ</a></li>
+                            <li><a class = 'mob_menu' href = '#aboutpython'>О PYTHON</a></li>
+                            <li><a class = 'mob_menu' href = '#tutorial'>УЧЕБНИК</a></li>
+                            <li><a class = 'mob_menu' href = '#links'>ПОЛЕЗНОЕ</a></li>
+                            <li><a class = 'mob_menu' href = '#contacts'>КОНТАКТЫ</a></li>
                         </ul>
                     </li>  
                 </ul>  
@@ -69,10 +69,6 @@
         <!--контакты-->
         <div class='footer'>
             <p><a name = 'contacts'></a></p>
-            <section class='social'>
-                <a href='' class='icon' ><i class="fab fa-twitter"></i></a>
-                <a href='' class='icon'><i class="fab fa-vk"></i></a>
-            </section>
             <div class='sometext'>
                 <p>© 2020 Полина Левит</p>
                 <p><a href = '#mainframe'>Наверх</a></p>
@@ -82,7 +78,7 @@
     <script>
         var header = $('.header'),
             scrollPrev = 0;
-
+            
         $(window).scroll(function() {
             var scrolled = $(window).scrollTop();
         
@@ -91,21 +87,21 @@
             } else {
                 header.removeClass('out');
             }
-            scrollPrev = scrolled;
         });
-        var header = $('.header_burger'),
+
+
+        var header_mob = $(".header_burger"),
             scrollPrev = 0;
-
-        $(window).scroll(function() {
+            
+            $(window).scroll(function() {
             var scrolled = $(window).scrollTop();
-        
+
             if ( scrolled > 500 && scrolled > scrollPrev ) {
-                header.addClass('out');
+                header_mob.addClass('out');
             } else {
-                header.removeClass('out');
+                header_mob.removeClass('out');
             }
             scrollPrev = scrolled;
-        });
-        
+            });
     </script>
 </html>
