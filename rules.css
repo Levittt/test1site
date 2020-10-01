@@ -4,7 +4,7 @@
     margin: 0;
     transition: .5s ease-in-out;
     font-family: Roboto;
-    src: url(roboto/Roboto-Medium.ttf);
+    src: url('roboto/Roboto-Medium.ttf');
 }
 .body{
     margin: 0px;
