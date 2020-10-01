@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name='keywords' content='Python, py, питон, учебник по python, учебник по питону, учебник питона, изучение питона, программирвание на python, программирование на python'>
+        <meta name='description' content='Удобный учебник по обучению основам программирования на Python'>
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="rules.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <title>learnpython</title>
+    </head>
+    <body>
+        <!--меню ПК-->
+        <div class='header'>
+                <div class = 'menu'>
+                    <p><a href = '#mainframe'>ГЛАВНАЯ</a></p>
+                    <p><a href = '#aboutpython'>О PYTHON</a></p>
+                    <p><a href = '#tutorial'>УЧЕБНИК</a></p>
+                    <p><a href = '#links'>ПОЛЕЗНОЕ</a></p>
+                    <p><a href = '#contacts'>КОНТАКТЫ</a></p>
+                </div>  
+        </div>
+        <!--меню ТФ-->
+        <div class='header_burger'>
+            <div class = 'menu_burger'>
+                <ul class = 'main-menu'>
+                    <li><a href = '#menu'><i class = 'fas fa-bars'></i></a>
+                        <ul class = 'sub-menu'>
+                            <li><a href = '#mainframe'>ГЛАВНАЯ</a></li>
+                            <li><a href = '#aboutpython'>О PYTHON</a></li>
+                            <li><a href = '#tutorial'>УЧЕБНИК</a></li>
+                            <li><a href = '#links'>ПОЛЕЗНОЕ</a></li>
+                            <li><a href = '#contacts'>КОНТАКТЫ</a></li>
+                        </ul>
+                    </li>  
+                </ul>  
+            </div> 
+        </div>
+        
+        <!--шапка-->
+        <div class = 'first_cover'>
+            <p><a name = 'mainframe'></a></p>
+            <div class = 'main-overlay'></div>
+            <h1 class = 'title_'>Учебник по Python</h1>
+            <h3 class = 'title_'>Начните изучать популярный, мощный, универсальный язык программирования уже сейчас</h3>
+            <form class = 'title_' action = '#aboutpython'><button>ПОЗНАКОМИТЬСЯ С PYTHON</button></form>
+        </div>
+        
+        <!--о python-->
+        <div class = 'second_about'>
+            <p><a name = 'aboutpython'></a></p> 
+        
+        </div>
+        
+        <!--содержание-->
+        <div class='third_content'>
+            <p><a name = 'content'></a></p>    
+        </div>
+        
+        <!--полезное-->
+        <div class='fourth_links'>
+            <p><a name = 'links'></a></p>     
+        </div>
+        
+        <!--контакты-->
+        <div class='footer'>
+            <p><a name = 'contacts'></a></p>
+            <section class='social'>
+                <a href='' class='icon' ><i class="fab fa-twitter"></i></a>
+                <a href='' class='icon'><i class="fab fa-vk"></i></a>
+            </section>
+            <div class='sometext'>
+                <p>© 2020 Полина Левит</p>
+                <p><a href = '#mainframe'>Наверх</a></p>
+            </div>
+        </div>
+    </body>
+    <script>
+        var header = $('.header'),
+            scrollPrev = 0;
+
+        $(window).scroll(function() {
+            var scrolled = $(window).scrollTop();
+        
+            if ( scrolled > 500 && scrolled > scrollPrev ) {
+                header.addClass('out');
+            } else {
+                header.removeClass('out');
+            }
+            scrollPrev = scrolled;
+        });
+        var header = $('.header_burger'),
+            scrollPrev = 0;
+
+        $(window).scroll(function() {
+            var scrolled = $(window).scrollTop();
+        
+            if ( scrolled > 500 && scrolled > scrollPrev ) {
+                header.addClass('out');
+            } else {
+                header.removeClass('out');
+            }
+            scrollPrev = scrolled;
+        });
+        
+    </script>
+</html>
