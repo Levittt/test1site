@@ -24,18 +24,18 @@
 @media only screen and (max-width: 1024px) {
     .header{display: none}
     .menu_burger{font-size: 5rem;}
-    *, *:before, *:after{font-family: Roboto;}
+    *, *:before, *:after{font-family: sans-serif, Roboto;}
    }
 @media only screen and (max-width: 800px) {
     .header{display: none}
     .menu_burger{font-size: 4rem;}
-    *, *:before, *:after{font-family: Roboto;}
+    *, *:before, *:after{font-family: sans-serif, Roboto;}
 }
 @media only screen and (min-width: 1024px){
     .header{display: flex !important;}
     .header_burger{display: none; opacity: 0; visibility: collapse;}
     .header_burger.out {display: none; opacity: 0; visibility: collapse;}
-    *, *:before, *:after{font-family: Roboto;}
+    *, *:before, *:after{font-family: sans-serif, Roboto;}
 
 }
 .pc_menu{
