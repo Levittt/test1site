@@ -284,7 +284,10 @@ form{
     max-width: 50px;
     max-height: 50px;
     margin: 10px;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 16px;
     display: flex;
     text-align: center;
     justify-content: center;
