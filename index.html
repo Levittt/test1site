@@ -50,7 +50,7 @@
             <form class = 'title_' action = '#aboutpython'><button>ПОЗНАКОМИТЬСЯ С PYTHON</button></form>
         </div>
         
-        <!--о python-->
+        <!--about python-->
         <div class = 'second_aboutpython'>
             <p><a name = 'aboutpython'></a></p> 
             <div id = 'first_container_aboutpython'>
@@ -63,6 +63,7 @@
             <div id = 'second_container_aboutpython'>
                 <p><a name = 'aboutpython2'></a></p> 
                 <h1 class = 'title_base'>Основные сферы применения языка Python</h1>
+                <div id = 'agh'>
                 <div class = 'spheres'>
                     <div class = 'sphere'><div class = 'num'><h4>1</h4></div><div class = 'column_sphere'><h4>WEB-РАЗРАБОТКА</h4><p class = 'p_spheres'>На Python можно реализовать сайты и различные веб-приложения, сценарии</p></div></div>
                     <div class = 'sphere'><div class = 'num'><h4>2</h4></div><div class = 'column_sphere'><h4>DATA SCIENCE</h4><p class = 'p_spheres'>Python используют и для машинного обучения (слышали про нейросети?), и для анализа данных, и для визуализации</p></div></div>
@@ -72,28 +73,59 @@
                     <div class = 'sphere'><div class = 'num'><h4>5</h4></div><div class = 'column_sphere'><h4>РАБОТА С БД</h4><p class = 'p_spheres'>Python позволяет работать с базами данных: организовывать к ним доступ, добавлять и извлекать данные, редактировать их</p></div></div>
                     <div class = 'sphere'><div class = 'num'><h4>6</h4></div><div class = 'column_sphere'><h4>СОЗДАНИЕ ИНТЕРФЕЙСОВ</h4><p class = 'p_spheres'>Хоть это и не самое популярное решение, но с помощью Python-библиотек (например, tkinter) можно быстро создать нужный вам графический интерфейс</p></div></div>
                 </div>
+                </div>
             </div>
         
         </div>
         
         <!--содержание-->
         <div class='third_content'>
-            <p><a name = 'content'></a></p>    
+            <p><a name = 'content'></a></p>  
+            <p>статьи</p>  
         </div>
         
         <!--полезное-->
         <div class='fourth_links'>
-            <p><a name = 'links'></a></p>     
+            <p><a name = 'links'></a></p>  
+            <div id = 'useful_links'>
+                <h1 id = 'center'>Полезные ссылки</h1>
+                <h3 class = 'useful_links_style'>КНИГИ</h3>
+                <a class = 'white_h3' href = 'https://codernet.ru/books/python/programmirovanie_na_python_tom_1_mark_lutc/'>&#128279 Программирование на Python - Марк Лутц</a>
+                <a class = 'white_h3' href = 'http://rus-linux.net/MyLDP/BOOKS/python.pdf'>&#128279 Введение в Python - Гвидо ван Россум и Фред Л. Дрейк-младший</a>
+                <h3 class = 'useful_links_style'>КУРСЫ</h3>
+                <a class = 'white_h3' href = 'https://www.coursera.org/learn/diving-in-python'>&#128279 Погружение в Python от Coursera</a>
+                <a class = 'white_h3' href = 'hhttps://stepik.org/course/67/promo'>&#128279 Программирование на Python от Stepic</a>
+                <h3 class = 'useful_links_style'>СТАТЬИ</h3>
+                <a class = 'white_h3' href = 'https://habr.com/ru/post/464597/'>&#128279 С чего начать изучение Python: книги для начинающих</a>
+                <a class = 'white_h3' href = 'https://habr.com/ru/post/353050/'>&#128279 Анализ данных с использованием Python</a>
+                <a class = 'white_h3' href = 'https://tproger.ru/translations/telegram-bot-create-and-deploy/'>&#128279 Бот для Telegram на Python: от первой строчки кода до запуска на Heroku</a>
+                <a class = 'white_h3' href = 'https://xn--90aeniddllys.xn--p1ai/ochen-prostoj-chatklient-server-na-python/'>&#128279 Очень простой чат(клиент/сервер) на Python</a>
+            </div>
         </div>
         
         <!--контакты-->
         <div class='footer'>
-            <div class = 'forms'></div>
             <p><a name = 'contacts'></a></p>
-            <div class='footer_text'>
-                <p>© 2020 Полина Левит</p>
-                <p><a id = 'page_up' href = '#mainframe'>Наверх ↑</a></p>
+            <div class = 'contact_us'>
+                <a id = 'con'>Связь с нами</a>
+                <h3 class = 'white_h3'>По всем вопросам, предложениям и замечаниям пишите на почту</h3>
             </div>
+
+            <div class = 'forms'>
+                <h3 class = 'white_h3'>learn-python@mail.ru</h3>
+                <div class = 'form_container'>
+                    <form action="send.php" method="post">
+                        <input type="text" name="fullname" placeholder="Ваше имя" required>
+                        <input type="text" name="email" placeholder="Ваш e-mail" required>
+                        <input type="text" name="msg" placeholder="Ваш комментарий" required>
+                        <input type="submit" class = 'title_' value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class='footer_text'>
+            <p>© 2020 Полина Левит устала это делать</p>
+            <p><a id = 'page_up' href = '#mainframe'>Наверх ↑</a></p>
         </div>
     </body>
     <script>
