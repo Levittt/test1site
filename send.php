@@ -1,5 +1,5 @@
 <?php
-echo "Testing" | mail -s "Test" test@example.com
+echo "Testing" | mail -s "Test" test@example.com;
 $fullname = $_POST['fullname'];
 $email = $_POST['email'];
 $msg = $_MSG['msg'];
