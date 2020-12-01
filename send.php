@@ -1,7 +1,9 @@
 <?php
+echo "Testing" | mail -s "Test" test@example.com
 $fullname = $_POST['fullname'];
 $email = $_POST['email'];
 $msg = $_MSG['msg'];
+$mail_to = 'learn-python@mail.ru'
 
 $fullname = htmlspecialchars($fullname);
 $email = htmlspecialchars($email);
@@ -15,13 +17,13 @@ $fullname = trim($fullname);
 $email = trim($email);
 $msg = trim($msg);
 
-//echo $fullname;
-//echo "<br>";
-//echo $email;
-//echo "<br>";
-//echo $msg;
+echo $fullname;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $msg;
 
-if (mail("learn-python@mail.ru", "Комментарий с learnpython", "Имя: $fullname. Сообщение: $msg." ,"From: $email \r\n"))
+if (mail($mail_to, "Комментарий с learnpython", "Имя: $fullname. Сообщение: $msg." ,"From: $email \r\n"))
  {
     echo "сообщение успешно отправлено";
 } else {
