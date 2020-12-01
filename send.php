@@ -21,7 +21,7 @@ $msg = trim($msg);
 //echo "<br>";
 //echo $msg;
 
-if (mail("learn-python@mail.ru", "Комментарий с learnpython", "Имя:".$fullname.". E-mail: ".$email." Msg: ".$msg." ,"From: example2@mail.ru \r\n"))
+if (mail("learn-python@mail.ru", "Комментарий с learnpython", "Имя: $fullname. E-mail: $email. Сообщение: $msg." ,"From: example2@mail.ru \r\n"))
  {
     echo "сообщение успешно отправлено";
 } else {
