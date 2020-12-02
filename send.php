@@ -35,10 +35,11 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'Комментарий с learnpython';
 $mail->Body    = '' .$name . ' оставил комментарий: ' .$msg. '<br>Почта этого пользователя: ' .$email;
 $mail->AltBody = '';
-$mail->send();
+
 if(!$mail->send()) {
     echo 'Error';
 } else {
     header('location: sent.html');
 }
+//$mail->send();
 ?>
