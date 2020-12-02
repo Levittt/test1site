@@ -11,7 +11,7 @@ $email = $_POST['email'];
 //$pas = $_POST['password'];
 $msg = $_POST['msg'];
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
