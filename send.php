@@ -11,7 +11,7 @@ $email = $_POST['email'];
 //$pas = $_POST['password'];
 $msg = $_POST['msg'];
 
-$mail->isSMTP();
+//$mail->isSMTP();
 $mail->SMTPDebug = 2;
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};                               // Set mailer to use SMTP
