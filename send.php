@@ -3,7 +3,7 @@
 require("/home/site/libs/PHPMailer-master/src/PHPMailer.php");
 require("/home/site/libs/PHPMailer-master/src/SMTP.php");
 
-$mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
 $name = $_POST['fullname'];
