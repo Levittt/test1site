@@ -1,7 +1,8 @@
 <?php 
 
-require("/home/site/libs/PHPMailer-master/src/PHPMailer.php");
-require("/home/site/libs/PHPMailer-master/src/SMTP.php");
+require("/phpailer.php");
+require("/smtp.php");
+
 
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
