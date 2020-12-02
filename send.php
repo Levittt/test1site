@@ -1,45 +1,57 @@
-<?php 
 
-require("/phpailer.php");
-require("/smtp.php");
+<?php
+// Файлы phpmailer
+require 'phpmailer.php';
+require 'smtp.php';
+require 'exception.php';
 
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-$mail->CharSet = 'utf-8';
-
+// Переменные, которые отправляет пользователь
 $name = $_POST['fullname'];
 $email = $_POST['email'];
-//$pas = $_POST['password'];
 $msg = $_POST['msg'];
 
-$mail->isSMTP();
-$mail->SMTPDebug = 2;
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
-$mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};                               // Set mailer to use SMTP
-$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'levitisacat@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'emily212121'; // Ваш пароль от почты с которой будут отправляться письма
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+// Формирование самого письма
+$title = "Комментарий с learnpython";
+$body = "
+<h2>Новое письмо</h2>
+<b>Имя:</b> $name<br>
+<b>Почта:</b> $email<br><br>
+<b>Сообщение:</b><br>$msg
+";
 
-$mail->setFrom('levitisacat@mail.ru'); // от кого будет уходить письмо?
-$mail->addAddress('learn-python@mail.ru');     // Кому будет уходить письмо 
-//$mail->addAddress('ellen@example.com');               // Name is optional
-//$mail->addReplyTo('info@example.com', 'Information');
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-$mail->isHTML(true);                                  // Set email format to HTML
+// Настройки PHPMailer
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+try {
+    $mail->isSMTP();   
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth   = true;
+    //$mail->SMTPDebug = 2;
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-$mail->Subject = 'Комментарий с learnpython';
-$mail->Body    = '' .$name . ' оставил комментарий: ' .$msg. '<br>Почта этого пользователя: ' .$email;
-$mail->AltBody = '';
+    // Настройки вашей почты
+    $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'levitisacat@mail.ru'; // Логин на почте
+    $mail->Password   = 'emily212121'; // Пароль на почте
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
+    $mail->setFrom('levitisacat@mail.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
-if(!$mail->send()) {
-    echo 'Error';
-} else {
-    header('location: sent.html');
+    // Получатель письма
+    $mail->addAddress('learn-python@mail.ru');  
+
+// Отправка сообщения
+$mail->isHTML(true);
+$mail->Subject = $title;
+$mail->Body = $body;    
+
+// Проверяем отравленность сообщения
+if ($mail->send()) {$result = "success";} 
+else {$result = "error";}
+
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
-//$mail->send();
-?>
+
+// Отображение результата
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
