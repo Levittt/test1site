@@ -19,7 +19,7 @@ $mail->Password = 'emily212121'; // Ваш пароль от почты с ко�
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
-$mail->setFrom('dzharuzov@mail.ru'); // от кого будет уходить письмо?
+$mail->setFrom('levitisacat@mail.ru'); // от кого будет уходить письмо?
 $mail->addAddress('learn-python@mail.ru');     // Кому будет уходить письмо 
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
