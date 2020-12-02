@@ -3,7 +3,6 @@
 require("/phpailer.php");
 require("/smtp.php");
 
-
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->CharSet = 'utf-8';
 
@@ -20,7 +19,7 @@ $mail->Host = 'smtp.mail.ru';  																							// Specify main and backup
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'levitisacat@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
 $mail->Password = 'emily212121'; // Ваш пароль от почты с которой будут отправляться письма
-$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('levitisacat@mail.ru'); // от кого будет уходить письмо?
