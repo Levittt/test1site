@@ -1,5 +1,6 @@
 
 <?php
+require 'PHPMailer-master/PHPMailerAutoload.php';
 // Файлы phpmailer
 require 'phpmailer.php';
 require 'smtp.php';
