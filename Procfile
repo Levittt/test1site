@@ -1,1 +1,1 @@
-web: python test.py
+web: heroku-php-apache2
