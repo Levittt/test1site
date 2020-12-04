@@ -5,7 +5,8 @@ require 'PHPMailer-master/PHPMailerAutoload.php';
 require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
 require 'PHPMailer-master/src/Exception.php';
-
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 // Переменные, которые отправляет пользователь
 $name = $_POST['fullname'];
 $email = $_POST['email'];
