@@ -30,11 +30,11 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'levitisacat@mail.ru'; // Логин на почте
-    $mail->Password   = 'emily212121'; // Пароль на почте
+    $mail->Username   = 'learn-python@mail.ru'; // Логин на почте
+    $mail->Password   = 'common24apolinary%%'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('levitisacat@mail.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('learn-python@mail.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('learn-python@mail.ru');  
