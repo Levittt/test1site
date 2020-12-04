@@ -2,9 +2,9 @@
 <?php
 require 'PHPMailer-master/PHPMailerAutoload.php';
 // Файлы phpmailer
-require 'phpmailer.php';
-require 'smtp.php';
-require 'exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
+require 'PHPMailer-master/src/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['fullname'];
@@ -21,7 +21,7 @@ $body = "
 ";
 
 // Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail = new PHPMailer;
 try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
