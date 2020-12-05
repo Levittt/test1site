@@ -285,7 +285,7 @@ form{
     margin-right: auto;
     padding: 10px;
     flex-wrap: wrap;
-    min-height: 100vh;
+    min-height: 90vh;
     max-width: 100%;
 }
 .sphere{ 
