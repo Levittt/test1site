@@ -285,7 +285,7 @@ form{
     margin-right: auto;
     padding: 10px;
     flex-wrap: wrap;
-    max-height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
 }
 .sphere{ 
@@ -450,4 +450,8 @@ h4{
 }
 .space:hover{
     color: #ffcc00;
+}
+#subbut{
+    box-shadow: none;
+    text-decoration: none;
 }
