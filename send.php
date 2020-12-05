@@ -47,7 +47,7 @@ $mail->Subject = $title;
 $mail->Body = $body;    
 
 // Проверяем отравленность сообщения
-if ($mail->send()) {$result = "success";} 
+if ($mail->send()) {$result = "success"; header('Location: sent.html');} 
 else {$result = "error";}
 
 } catch (Exception $e) {
