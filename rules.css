@@ -285,10 +285,10 @@ form{
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 10px;
+
     padding: 10px;
     flex-wrap: wrap;
-    min-height: 100vh;
+    min-height: 90vh;
     max-height: 120vh;
     max-width: 100%;
 }
@@ -308,7 +308,6 @@ form{
     margin: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 10px;
     padding-top: 16px;
     display: flex;
     text-align: center;
@@ -329,9 +328,56 @@ h4{
 .third_content{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 80vh;
-    background-color: #E0E0E0;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 70vh; 
+    background-color: white;
+}
+#rrr{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;
+    font-weight: normal;
+}
+#article_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: left;
+  
+    margin: 10px;
+    margin-top: 0%;
+    font-size: 20px;
+}
+
+#rrr3{
+    color: #395bcc;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+    font-size: 50px;
+    font-weight: normal;
+}
+#now{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 50%;
+    
+}
+.black_h3{
+    color: black;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 20px;
 }
 /*___________fourth___________________________________*/
 .fourth_links{
