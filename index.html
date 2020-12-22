@@ -21,6 +21,7 @@
                     <p><a class = 'pc_menu' href = '#aboutpython'>О PYTHON</a></p>
                     <p><a class = 'pc_menu' href = '#tutorial'>УЧЕБНИК</a></p>
                     <p><a class = 'pc_menu' href = '#links'>ПОЛЕЗНОЕ</a></p>
+                    <p><a class = 'pc_menu' href = '#docs'>ДОКУМЕНТЫ</a></p>
                     <p><a class = 'pc_menu' href = '#contacts'>КОНТАКТЫ</a></p>
                 </div>  
         </div>
@@ -34,6 +35,7 @@
                             <li><a class = 'mob_menu' href = '#aboutpython'>О PYTHON</a></li>
                             <li><a class = 'mob_menu' href = '#tutorial'>УЧЕБНИК</a></li>
                             <li><a class = 'mob_menu' href = '#links'>ПОЛЕЗНОЕ</a></li>
+                            <li><a class = 'pc_menu' href = '#docs'>ДОКУМЕНТЫ</a></li>
                             <li><a class = 'mob_menu' href = '#contacts'>КОНТАКТЫ</a></li>
                         </ul>
                     </li>  
@@ -80,24 +82,26 @@
         
         <!--содержание-->
         <div class='third_content'>
-            <p><a name = 'content'></a></p>
-            <h2 id = 'rrr'>Содержание</h1>
+            <p><a name = 'content'></a></p>   
             <div id='now'>
+                <h2 id = 'contents'>Содержание</h1>
                 <div id = 'article_links'>
-                    <a class = 'black_h3' href = 'https://codernet.ru/books/python/programmirovanie_na_python_tom_1_mark_lutc/'>&#128204; Введение</a>
-                    <a class = 'black_h3' href = 'http://rus-linux.net/MyLDP/BOOKS/python.pdf'>&#128204;Урок 1</a>
-                    
-                    <a class = 'black_h3' href = 'https://www.coursera.org/learn/diving-in-python'>&#128204;Урок 2</a>
-                    <a class = 'black_h3' href = 'https://www.coursera.org/learn/diving-in-python'>&#128204;Урок 3</a>
-                    <a class = 'black_h3' href = 'https://www.coursera.org/learn/diving-in-python'>&#128204;Урок 4</a>
+                    <a class = 'black_h3' href = 'https://younglinux.info/python/introductionpython.php'>&#128204; Введение</a>
+                    <a class = 'black_h3' href = 'https://younglinux.info/python/variable.php'>&#128204;Типы данных и переменные</a>
+                    <a class = 'black_h3' href = 'https://younglinux.info/python/input.php'>&#128204;Ввод и вывод данных</a>
+                    <a class = 'black_h3' href = 'https://younglinux.info/python/operators.php'>&#128204;Логические выражения и операторы</a>
+                    <a class = 'black_h3' href = 'https://younglinux.info/python/if.php'>&#128204;Ветвление. Условный оператор</a>
+                    <a class = 'black_h3' href = 'https://younglinux.info/python/while.php'>&#128204;Циклы</a>
+                    <a class = 'black_h3' href = 'https://younglinux.info/python/function.php'>&#128204;Функции в программировании</a>
+                    <a class = 'black_h3' href = 'https://younglinux.info/python/modules'>&#128204;Модули</a>
                 </div> 
-        </div>
+            </div>
         </div>
         
         <!--полезное-->
         <div class='fourth_links'>
             <p><a name = 'links'></a></p>  
-            <div id = 'useful_links'>
+            <div class = 'useful_links'>
                 <h1 id = 'center'>Полезные ссылки</h1>
                 <h3 class = 'useful_links_style'>КНИГИ</h3>
                 <a class = 'white_h3' href = 'https://codernet.ru/books/python/programmirovanie_na_python_tom_1_mark_lutc/'>&#128279 Программирование на Python - Марк Лутц</a>
@@ -112,7 +116,19 @@
                 <a class = 'white_h3' href = 'https://xn--90aeniddllys.xn--p1ai/ochen-prostoj-chatklient-server-na-python/'>&#128279 Очень простой чат(клиент/сервер) на Python</a>
             </div>
         </div>
-        
+
+        <!--Документы-->
+        <div class='documents'>
+            <p><a name = 'docs'></a></p>  
+            <div class = 'useful_links'>
+                <h1 id = 'center'>Документы</h1>
+                <a class = 'white_h3' download href = 'files/PEP8.pdf'>&#128190 PEP 8 - стиль кода на Python</a>
+                <a class = 'white_h3' download href = 'files/AboutPython.pptx'>&#128190 Презентация - Возможности использования Python на примере готового продукта</a>
+                <a class = 'white_h3' download href = 'files/bosova.pdf'>&#128190 Методическое пособие - рабочая программа, предметные результаты</a>
+                <a class = 'white_h3' download href = 'files/fgos.pdf'>&#128190 ФГОС среднего общего образования</a>
+            </div>
+        </div>
+
         <!--контакты-->
         <div class='footer'>
             <p><a name = 'contacts'></a></p>
@@ -139,8 +155,6 @@
         </div>
     </body>
     <script>
-       
-        <!-- End Google Analytics -->
         var header = $('.header'),
             scrollPrev = 0;
             
@@ -153,7 +167,6 @@
                 header.removeClass('out');
             }
         });
-
 
         var header_mob = $(".header_burger"),
             scrollPrev = 0;
@@ -177,10 +190,10 @@
             req.open('POST', php, true);
             req.onload = function() {
                 if (req.status >= 200 && req.status < 400) {
-                json = JSON.parse(this.response); // Ебанный internet explorer 11
+                json = JSON.parse(this.response); 
                     console.log(json);
                     
-                    // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+                    // ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
                     if (json.result == "success") {
                         // Если сообщение отправлено
                         console.log("Сообщение отправлено");
