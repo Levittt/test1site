@@ -155,32 +155,7 @@
         </div>
     </body>
     <script>
-        var header = $('.header'),
-            scrollPrev = 0;
-            
-        $(window).scroll(function() {
-            var scrolled = $(window).scrollTop();
         
-            if ( scrolled > 500 && scrolled > scrollPrev ) {
-                header.addClass('out');
-            } else {
-                header.removeClass('out');
-            }
-        });
-
-        var header_mob = $(".header_burger"),
-            scrollPrev = 0;
-            
-            $(window).scroll(function() {
-            var scrolled = $(window).scrollTop();
-
-            if ( scrolled > 500 && scrolled > scrollPrev ) {
-                header_mob.addClass('out');
-            } else {
-                header_mob.removeClass('out');
-            }
-            scrollPrev = scrolled;
-            });
     
         // Отправка данных на сервер
         function send(event, php){
