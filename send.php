@@ -7,7 +7,7 @@ require 'PHPMailer-master/src/SMTP.php';
 require 'PHPMailer-master/src/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-// Переменные, которые отправляет пользователь
+
 $name = $_POST['fullname'];
 $email = $_POST['email'];
 $msg = $_POST['msg'];
@@ -21,7 +21,6 @@ $body = "
 <b>Сообщение:</b><br>$msg
 ";
 
-// Настройки PHPMailer
 $mail = new PHPMailer;
 try {
     $mail->isSMTP();   
@@ -30,13 +29,13 @@ try {
     $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-    // Настройки вашей почты
-    $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'learn-python@mail.ru'; // Логин на почте
-    $mail->Password   = 'common24apolinary%%'; // Пароль на почте
+    // Настройки почты
+    $mail->Host       = 'smtp.mail.ru'; 
+    $mail->Username   = 'learn-python@mail.ru'; 
+    $mail->Password   = 'common24apolinary%%'; 
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('learn-python@mail.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('learn-python@mail.ru', 'Имя отправителя');
 
     // Получатель письма
     $mail->addAddress('learn-python@mail.ru');  
@@ -46,7 +45,7 @@ $mail->isHTML(true);
 $mail->Subject = $title;
 $mail->Body = $body;    
 
-// Проверяем отравленность сообщения
+// Проверяем, отравилось ли сообщение
 if ($mail->send()) {$result = "success"; header('Location: test1site.herokuapp.com/sent.html');} 
 else {$result = "error";}
 

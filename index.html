@@ -153,16 +153,17 @@
                 <div id = 'emailc'><h3  class = 'white_h3'>learn-python@mail.ru</h3></div>
                 <div class = 'form_container'>
                     <form class = 'separate' enctype="multipart/form-data"   method="post" onsubmit="send(event, 'send.php')">
-                        <input class = 'space' type="text" name="fullname" placeholder="Ваше имя" required />
-                        <input class = 'space' type="text" name="email" placeholder="Ваш e-mail" required />
+                        <input id='in' class = 'space' type="text" name="fullname" placeholder="Ваше имя" required />
+                        <input class = 'space' type="email" name="email" placeholder="Ваш e-mail" required />
                         <input class = 'space' type="text" name="msg" placeholder="Ваш комментарий" required />
                         <input class = 'space' id = 'subbut' type="submit" class = 'title_' value="Отправить">
                     </form>
+                    <p id="out2"></p>
                 </div>
             </div>
         </div>
         <div class='footer_text'>
-            <p>© 2020 Полина Левит</p>
+            <p>© 2022 Полина Левит</p>
             <p><a id = 'page_up' href = '#mainframe'>Наверх ↑</a></p>
         </div>
     </body>
@@ -193,7 +194,30 @@
             }
             scrollPrev = scrolled;
             });
-    
+            
+let jin = document.getElementById("in");
+let jout = document.getElementById("out2");
+let btn = document.getElementById("subbut");
+
+jin.addEventListener('keydown', function(e){
+  if( e.key.match(/[0-9]/) ) return e.preventDefault();
+}); // Будет перехватывать все числа при ручном вводе. 
+// Тажке нужна, чтобы replace не сбрасывал каретку, срабатывая каждый раз.
+
+jin.addEventListener('input', function(e){
+  // На случай, если умудрились ввести через копипаст или авто-дополнение.
+  jin.value = jin.value.replace(/[0-9]/g, "");
+});
+
+btn.addEventListener('click', function(){
+  let val = jin.value;
+  if ( val ) {
+    jout.textContent = `Привет ${val}, хорошего дня!`;
+  } else {
+    alert("введите имя");
+  }
+});
+
         // Отправка данных на сервер
         function send(event, php){
             console.log("Отправка запроса");
