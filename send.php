@@ -32,7 +32,7 @@ try {
     // Настройки почты
     $mail->Host       = 'smtp.mail.ru'; 
     $mail->Username   = 'learn-python@mail.ru'; 
-    $mail->Password   = 'common24apolinary%%'; 
+    $mail->Password   = 'mytW8rM2mxTLWjAZs05q'; 
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('learn-python@mail.ru', 'Имя отправителя');
